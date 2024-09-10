@@ -1,0 +1,180 @@
+/* Import de la police pixelisée depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Style global */
+body {
+    font-family: 'Press Start 2P', cursive; /* Utilisation de la police pixelisée */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #1a1a1a; /* Fond sombre pour un effet gaming */
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #ff6b6b, #f7d794, #3dc1d3, #6a89cc);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite; /* Réduit la durée pour accélérer l'animation */
+    color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3); /* Fond semi-transparent pour les boutons */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Titres des sections */
+section h2 {
+    border-bottom: 2px solid #ff6b6b; /* Couleur vive pour les titres */
+    padding-bottom: 10px;
+    color: #f7d794; /* Couleur des titres */
+}
+
+/* Styles des vidéos */
+.video-container {
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Bordure blanche semi-transparente */
+    border-radius: 10px; /* Bordures arrondies */
+    padding: 2px; /* Padding pour laisser de l'espace entre la bordure et le contenu */
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.4), rgba(106, 137, 204, 0.4)); /* Dégradé en arrière-plan */
+    transition: border-color 0.3s ease; /* Transition pour la couleur de la bordure */
+    margin-bottom: 20px;
+}
+
+.video-container:hover {
+    border-color: #ff6b6b; /* Changement de couleur de la bordure au survol */
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.6), rgba(106, 137, 204, 0.6)); /* Dégradé plus prononcé */
+}
+
+.video {
+    position: relative; /* Nécessaire pour les effets de survol */
+    border-radius: 10px; /* Bordures arrondies */
+    overflow: hidden; /* Cache les parties qui débordent du cadre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère pour l'effet de profondeur */
+    transition: all 0.3s ease; /* Transition fluide pour les effets de survol */
+}
+
+.video:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+    transform: scale(1.02); /* Légère agrandissement au survol */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 10px; /* Bordures arrondies pour l'iframe */
+}
+
+/* Pied de page */
+footer {
+    background-color: #222;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styles pour le lien email */
+a {
+    color: #3dc1d3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour la newsletter */
+.newsletter {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 10px;
+    color: #ff6b6b;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: #ff3b3b;
+}
